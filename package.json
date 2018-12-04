@@ -9,7 +9,7 @@
     "react-scripts": "2.1.1"
   },
   "scripts": {
-    "start": "sass --watch src/styles:src/styles | PORT=3001 react-scripts start",
+    "start": "sass --watch src/styles:src/styles --sourcemap=none | PORT=3001 react-scripts start",
     "sass": "sass --watch src/styles:src/styles",
     "build": "react-scripts build",
     "test": "react-scripts test",
