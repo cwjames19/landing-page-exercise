@@ -195,5 +195,8 @@ body {
   font-family: "FoundrySterling", Arial, sans-serif;
   background-color: #ffffff;
 }
+body * {
+  border: 1px solid black;
+}
 
 /*# sourceMappingURL=index.css.map */
