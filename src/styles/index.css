@@ -187,8 +187,13 @@ img {
   max-width: 100%;
 }
 
+@font-face {
+  font-family: "FoundrySterling";
+  src: url("../fonts/FoundrySterlingBook.ttf") format("truetype");
+}
 body {
   font-family: "FoundrySterling", Arial, sans-serif;
+  background-color: #ffffff;
 }
 
 /*# sourceMappingURL=index.css.map */
