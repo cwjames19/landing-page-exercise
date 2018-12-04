@@ -7,9 +7,10 @@ html {
 
 * {
   box-sizing: border-box;
-}
-*::after, *::before {
-  box-sizing: inherit;
+  &::after,
+  &::before {
+    box-sizing: inherit;
+  }
 }
 
 html,
@@ -102,6 +103,7 @@ video {
 }
 
 /* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -130,14 +132,20 @@ q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after {
-  content: "";
-  content: none;
+blockquote {
+  &:before,
+  &:after {
+    content: '';
+    content: none;
+  }
 }
 
-q:before, q:after {
-  content: "";
-  content: none;
+q {
+  &:before,
+  &:after {
+    content: '';
+    content: none;
+  }
 }
 
 table {
@@ -156,17 +164,10 @@ option {
   appearance: none;
   background-color: transparent;
   -webkit-tap-highlight-color: transparent;
-}
-button:focus, button:active,
-input:focus,
-input:active,
-textarea:focus,
-textarea:active,
-select:focus,
-select:active,
-option:focus,
-option:active {
-  outline: none;
+  &:focus,
+  &:active {
+    outline: none;
+  }
 }
 
 a {
@@ -174,17 +175,17 @@ a {
   font-family: inherit;
   color: inherit;
   -webkit-tap-highlight-color: transparent;
-}
-a:focus, a:hover, a:active {
-  text-decoration: underline;
-}
-a:hover {
-  cursor: pointer;
-  text-decoration: underline;
+  &:focus,
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
 }
 
 img {
   max-width: 100%;
 }
-
-/*# sourceMappingURL=index.css.map */
