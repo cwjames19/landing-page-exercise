@@ -1,0 +1,58 @@
+//setup for future use when this and other pages are made to be responsive
+
+$breakpoint-tablet: 3000px;       // placeholder values
+$breakpoint-desktop: 3001px;      // placeholder values
+
+@mixin media($value:'', $orientation:'') {
+  @if $value == 'mobile' && $orientation == '' {
+    @media screen and (max-width: calc($breakpoint-tablet - 1)) {
+      @content;
+    }
+  }
+
+  @else if $value == 'tablet' && $orientation == '' {
+    @media screen and (min-width: $breakpoint-tablet) and (max-width: calc($breakpoint-desktop - 1)) {
+      @content;
+    }
+  }
+
+  @else if $value == 'desktop' && $orientation == '' {
+    @media screen and (min-width: $breakpoint-desktop) {
+      @content;
+    }
+  }
+
+  @else if $value == 'mobile' && $orientation == 'landscape' {
+    @media screen and (max-width: calc($breakpoint-tablet - 1)) and (orientation: landscape) {
+      @content;
+    }
+  }
+
+  @else if $value == 'mobile' && $orientation == 'portrait' {
+    @media screen and (max-width: calc($breakpoint-tablet - 1)) and (orientation: portrait) {
+      @content;
+    }
+  }
+
+  @else if $value == 'tablet' && $orientation == 'landscape' {
+    @media screen and (min-width: $breakpoint-tablet) and (max-width: calc($breakpoint-desktop - 1)) and (orientation: landscape) {
+      @content;
+    }
+  }
+
+  @else if $value == 'tablet' && $orientation == 'portrait' {
+    @media screen and (min-width: $breakpoint-tablet) and (max-width: calc($breakpoint-desktop - 1)) and (orientation: portrait) {
+      @content;
+    }
+  }
+
+  @else if $value != '' {
+    @media(max-width: $value) {
+      @content;
+    }
+  }
+
+  @else {
+    @content;
+  }
+}
