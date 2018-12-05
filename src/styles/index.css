@@ -189,10 +189,27 @@ img {
 
 @font-face {
   font-family: "FoundrySterling";
-  src: url("../../fonts/FoundrySterlingBook.ttf") format("truetype");
+  src: url("../fonts/FoundrySterlingBook.ttf") format("truetype");
 }
+@font-face {
+  font-family: "FoundrySterling-Light";
+  src: url("../fonts/FoundrySterling-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "FoundrySterling-Medium";
+  src: url("../fonts/FoundrySterling-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "FoundrySterling-Demi";
+  src: url("../fonts/FoundrySterling-Demi.ttf") format("truetype");
+}
+html {
+  background-color: darkgrey;
+}
+
 body {
   font-family: "FoundrySterling", Arial, sans-serif;
+  background-color: darkgrey;
 }
 
 /*# sourceMappingURL=index.css.map */
