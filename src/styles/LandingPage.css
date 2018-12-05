@@ -1,13 +1,14 @@
 .landing-page {
-  display: block;
-  height: 830px;
-  width: 1440px;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  width: 100%;
 }
 
 .banner {
   display: block;
   width: 100%;
-  height: 147px;
+  min-height: 147px;
   padding: 48px 240px 0;
   background-color: #ffffff;
 }
@@ -33,14 +34,19 @@
   font-weight: 300;
 }
 
-.main {
-  display: block;
+.main--container {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1 0 auto;
   width: 100%;
   height: calc(830px - 147px - 100px);
   background-color: #f5f5f5;
-  padding: 62px 0 0 0;
 }
-.main h2 {
+.main--container #top-spacer {
+  height: 60px;
+  flex-grow: 5;
+}
+.main--container .main--content h2 {
   width: 850px;
   height: 52px;
   margin: 0 auto 53px;
@@ -52,11 +58,11 @@
   letter-spacing: 1.44px;
   color: #152556;
 }
-.main--form {
+.main--container .main--content--form {
   width: 421px;
   margin: 0 auto 42px;
 }
-.main--form input {
+.main--container .main--content--form input {
   width: 100%;
   height: 45px;
   padding: 0 0 0 18px;
@@ -69,27 +75,27 @@
   font-weight: bold;
   letter-spacing: 0.6px;
 }
-.main--form input::placeholder {
+.main--container .main--content--form input::placeholder {
   opacity: 1;
   color: #152556;
 }
-.main--form input:first-of-type {
+.main--container .main--content--form input:first-of-type {
   margin: 0 0 25px;
 }
-.main--form input:last-of-type {
+.main--container .main--content--form input:last-of-type {
   margin: 0 0 11px;
 }
-.main--form--password-options, .main--form--login-options {
+.main--container .main--content--form--password-options, .main--container .main--content--form--login-options {
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
 }
-.main--form--password-options {
+.main--container .main--content--form--password-options {
   height: 30px;
   margin: 0 0 19px 0;
 }
-.main--form--password-options a {
+.main--container .main--content--form--password-options a {
   color: #707e8c;
   line-height: 16px;
   font-size: 12px;
@@ -100,29 +106,29 @@
   font-style: normal;
   font-stretch: normal;
 }
-.main--form--login-options > div {
+.main--container .main--content--form--login-options > div {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
 }
-.main--form--login-options label {
+.main--container .main--content--form--login-options label {
   color: #152556;
   font-size: 14px;
   letter-spacing: 0.56px;
 }
-.main--form--login-options div:first-of-type input {
+.main--container .main--content--form--login-options div:first-of-type input {
   width: 25px;
   height: 25px;
   margin: 0 18px 0 0;
   padding: 0;
 }
-.main--form--login-options div:first-of-type label {
+.main--container .main--content--form--login-options div:first-of-type label {
   line-height: 16px;
   font-family: "FoundrySterling-Demi", Arial, sans-serif;
   font-weight: normal;
 }
-.main--form--login-options div:nth-of-type(2) label {
+.main--container .main--content--form--login-options div:nth-of-type(2) label {
   position: relative;
   left: 18px;
   line-height: 31px;
@@ -130,27 +136,25 @@
   font-family: Arial, sans-serif;
   font-weight: bold;
 }
-.main--form--login-options div:nth-of-type(2) button {
+.main--container .main--content--form--login-options div:nth-of-type(2) button {
   height: 43px;
   width: 43px;
   border-radius: 50%;
   background-color: #f47920;
   color: #ffffff;
 }
-.main--form--login-options div:nth-of-type(2) button img {
+.main--container .main--content--form--login-options div:nth-of-type(2) button img {
   color: #ffffff;
   height: 17px;
   width: 17px;
 }
-.main hr {
-  position: relative;
-  left: 0.5px;
+.main--container .main--content hr {
   margin: 0 auto 24px;
   width: 480px;
   border-top-width: 0;
   border-color: #d1d1d1;
 }
-.main h4 {
+.main--container .main--content h4 {
   position: relative;
   height: 36px;
   width: 605px;
@@ -162,7 +166,7 @@
   color: #152556;
   text-align: center;
 }
-.main p:last-of-type {
+.main--container .main--content p:last-of-type {
   width: 480px;
   height: 69px;
   line-height: 24px;
@@ -172,9 +176,14 @@
   color: #516272;
   text-align: center;
 }
+.main--container #bottom-spacer {
+  height: 30px;
+  flex-grow: 4;
+}
 
 .footer {
   display: flex;
+  flex-shrink: 0;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;

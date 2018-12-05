@@ -211,5 +211,12 @@ body {
   font-family: "FoundrySterling", Arial, sans-serif;
   background-color: darkgrey;
 }
+body * {
+  border: 1px solid black;
+}
+
+html, body, #root, .App {
+  height: 100%;
+}
 
 /*# sourceMappingURL=index.css.map */

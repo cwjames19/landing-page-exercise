@@ -7,4 +7,12 @@ html {
 body {
   font-family: 'FoundrySterling', Arial, sans-serif;
   background-color: darkgrey;
+  
+  * {
+    border: 1px solid black;
+  }
+}
+
+html, body, #root, .App {
+  height: 100%;
 }
