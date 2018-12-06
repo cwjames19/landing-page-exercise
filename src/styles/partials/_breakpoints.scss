@@ -1,47 +1,42 @@
-//setup for future use when this and other pages are made to be responsive
-
-$breakpoint-tablet: 3000px;       // placeholder values
-$breakpoint-desktop: 3001px;      // placeholder values
-
 @mixin media($value:'', $orientation:'') {
-  @if $value == 'mobile' && $orientation == '' {
-    @media screen and (max-width: calc($breakpoint-tablet - 1)) {
+  @if $value=='mobile' and $orientation=='' {
+    @media screen and (max-width: 767px) {
       @content;
     }
   }
 
-  @else if $value == 'tablet' && $orientation == '' {
-    @media screen and (min-width: $breakpoint-tablet) and (max-width: calc($breakpoint-desktop - 1)) {
+  @else if $value == 'tablet' and $orientation == '' {
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
       @content;
     }
   }
 
-  @else if $value == 'desktop' && $orientation == '' {
-    @media screen and (min-width: $breakpoint-desktop) {
+  @else if $value == 'desktop' and $orientation == '' {
+    @media screen and (min-width: 1024px) {
       @content;
     }
   }
 
-  @else if $value == 'mobile' && $orientation == 'landscape' {
-    @media screen and (max-width: calc($breakpoint-tablet - 1)) and (orientation: landscape) {
+  @else if $value == 'mobile' and $orientation == 'landscape' {
+    @media screen and (max-width: 767px) and (orientation: landscape) {
       @content;
     }
   }
 
-  @else if $value == 'mobile' && $orientation == 'portrait' {
-    @media screen and (max-width: calc($breakpoint-tablet - 1)) and (orientation: portrait) {
+  @else if $value == 'mobile' and $orientation == 'portrait' {
+    @media screen and (max-width: 767px) and (orientation: portrait) {
       @content;
     }
   }
 
-  @else if $value == 'tablet' && $orientation == 'landscape' {
-    @media screen and (min-width: $breakpoint-tablet) and (max-width: calc($breakpoint-desktop - 1)) and (orientation: landscape) {
+  @else if $value == 'tablet' and $orientation == 'landscape' {
+    @media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
       @content;
     }
   }
 
-  @else if $value == 'tablet' && $orientation == 'portrait' {
-    @media screen and (min-width: $breakpoint-tablet) and (max-width: calc($breakpoint-desktop - 1)) and (orientation: portrait) {
+  @else if $value == 'tablet' and $orientation == 'portrait' {
+    @media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
       @content;
     }
   }
