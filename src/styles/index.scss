@@ -8,3 +8,7 @@ body {
   font-family: 'FoundrySterling', Arial, sans-serif;
   background-color: darkgrey;
 }
+
+html, body, #root, .App {
+  height: 100%;
+}
