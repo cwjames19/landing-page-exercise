@@ -1,5 +1,6 @@
 import React from 'react';
 import DSVLogo from '../assets/svg/logo.svg';
+import DSVLogoMobile from '../assets/png/logo-mobile.png';
 import ChevronRight from '../assets/svg/chevron-right.svg';
 import '../styles/LandingPage.css';
 
@@ -7,10 +8,9 @@ const LandingPage = () => {
   return(
     <div className="landing-page">
       <div className="banner">
-        <div className="banner-content">
-          <img src={DSVLogo} alt="DSV Logo" />
-          <h3>Name of self service</h3>
-        </div>
+        <img id="logo" src={DSVLogo} alt="DSV Logo" />
+        <img id="logo-mobile" src={DSVLogoMobile} alt="DSV Logo" />
+        <h3>Name of self service</h3>
       </div>
       <div className="main--container">
         <div id="top-spacer"></div>
@@ -31,7 +31,7 @@ const LandingPage = () => {
               <div>
                 <label>LOGIN</label>
                 <button>
-                  <img src={ChevronRight}></img>
+                  <img src={ChevronRight} alt="chevron right"></img>
                 </button>
               </div>
             </div>
